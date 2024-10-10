@@ -13,10 +13,11 @@ const firebaseConfig = {
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
 };
 
-
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const signInWithGoogle = () => {
-    const auth = getAuth();
+    const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider)
         .then((res) => {
@@ -25,12 +26,10 @@ const signInWithGoogle = () => {
         .catch((error) => {
             console.log(error.message);
         });
-}
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+};
 
 const logOut = () => {
-    const auth = getAuth();
+    const auth = getAuth(app);
     signOut(auth)
       .then(() => {
         console.log("logged out");
