@@ -32,7 +32,7 @@ const Header = () => {
   }
   const classes = useStyles();
   return(
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 3, mb: 4 }}>
       <AppBar position="static">
         <Toolbar className={ classes.toolbar }>
           <IconButton
