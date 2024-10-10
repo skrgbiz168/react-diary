@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { dig } from "dig-ts";
 import { signInWithGoogle } from "../service/firebase"
-import { user, useAuthContext } from "../providers/AuthProvider";
+import { useAuthContext } from "../providers/AuthProvider";
 import * as Api from "../service/api"
 import ToDoList from "./ToDoList"
 
