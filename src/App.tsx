@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import './service/firebase';
 import { AuthProvider } from './providers/AuthProvider';

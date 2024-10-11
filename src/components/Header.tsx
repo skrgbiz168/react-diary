@@ -1,5 +1,3 @@
-import React, { useContext, useState } from "react";
-import { dig } from "dig-ts";
 import { signInWithGoogle, logOut } from "../service/firebase";
 import { useAuthContext } from "../providers/AuthProvider";
 import AppBar from '@mui/material/AppBar';
@@ -18,7 +16,6 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Header = () => {
-  const [value, setValue] = useState();
   const useAuth = useAuthContext();
   const button = () => {
     let butttonDom;
