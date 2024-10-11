@@ -11,6 +11,7 @@
 # production
 /build
 /study
+/.firebase/*.cashe
 
 # misc
 .DS_Store

@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, UserCredential, signInWithPopup, signOut } from 'firebase/auth';
-import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs,
+    initializeFirestore, memoryLocalCache } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey:  process.env.REACT_APP_FIREBASE_API_KEY,
@@ -15,6 +16,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// オフラインの対応情報
+initializeFirestore(app, {localCache: memoryLocalCache()});
 
 const signInWithGoogle = () => {
     const auth = getAuth(app);
