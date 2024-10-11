@@ -1,6 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import { dig } from "dig-ts";
-import { signInWithGoogle } from "../service/firebase"
+import React, { useState, useEffect } from "react";
 import { useAuthContext } from "../providers/AuthProvider";
 import * as Api from "../service/api"
 import ToDoList from "./ToDoList"
@@ -58,7 +56,7 @@ const Dashboard = () => {
                 </form>
         } else {
             // ログインしていない場合
-            dom = <Button onClick={ signInWithGoogle }>ログイン</Button>
+            // dom = <Button onClick={ signInWithGoogle }>ログイン</Button>
         }
         return dom
       }

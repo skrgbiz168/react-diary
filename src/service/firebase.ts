@@ -18,7 +18,8 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // オフラインの対応情報
-initializeFirestore(app, {localCache: memoryLocalCache()});
+// バージョンによってか使えないのでコメントアウト
+// initializeFirestore(app, {localCache: memoryLocalCache()});
 
 const signInWithGoogle = () => {
     const auth = getAuth(app);
