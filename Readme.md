@@ -10,3 +10,9 @@
 ```
 npm start
 ```
+
+firebaseに直接反映する場合
+```
+npm run build
+firebase deploy
+```
