@@ -1,4 +1,3 @@
-import firebase from 'firebase/app';
 import { Timestamp, collection, addDoc, getDoc, getDocs, query, where, orderBy, deleteDoc, doc,
     updateDoc
  } from 'firebase/firestore';

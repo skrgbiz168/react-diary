@@ -1,15 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
-import { dig } from "dig-ts";
-import { signInWithGoogle } from "../service/firebase"
-import { user, useAuthContext } from "../providers/AuthProvider";
 import * as Api from "../service/api"
-import Avatar from '@mui/material/Avatar';
 import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Checkbox from '@mui/material/Checkbox';
 import ListItemText from '@mui/material/ListItemText';
 import IconButton from '@mui/material/IconButton';
-import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { makeStyles } from '@mui/styles';
 

@@ -1,11 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
-import { dig } from "dig-ts";
-import { signInWithGoogle } from "../service/firebase"
+import { useState, useEffect } from "react";
 import { useAuthContext } from "../providers/AuthProvider";
 import * as Api from "../service/api"
 import ToDoList from "./ToDoList"
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Input from '@mui/material/Input';
 import { makeStyles } from '@mui/styles';
 
@@ -58,7 +55,7 @@ const Dashboard = () => {
                 </form>
         } else {
             // ログインしていない場合
-            dom = <Button onClick={ signInWithGoogle }>ログイン</Button>
+            // dom = <Button onClick={ signInWithGoogle }>ログイン</Button>
         }
         return dom
       }
